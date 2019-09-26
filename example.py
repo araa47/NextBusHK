@@ -18,5 +18,5 @@ for points in route.get("data", []):
     pprint.pprint(stop_details)
 
 # Get ETA for a certain bus 
-eta = bus.get_eta("NWFB","001207", "2")
+eta = bus.get_eta("NWFB", "2","001207")
 pprint.pprint(eta)
