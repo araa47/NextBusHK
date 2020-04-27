@@ -10,12 +10,26 @@ Api Specs: https://www.nwstbus.com.hk/datagovhk/bus_eta_api_specifications.pdf
 
 This is just a py file as of now, so you can simply copy the nextBusApi.py file to your project and install the 'requests' module.
 
-Alternatively you can clone this project and use pipenv to install deps.
+Alternatively you can clone this project and use poetry to install deps.
 
 1. clone the project
-2. pipenv shell
-3. pipenv install
+2. poetry shell
+3. poetry install
 
 ## Running
 
-Look at the example.py file for usage example.
+Look at the example.py file for usage example. You can simply run ```python example.py```
+
+## FAQ: 
+
+1) Could not install packages due to an EnvironmentError: Could not find a suitable TLS CA certificate bundle:
+
+Please find the path of you certificate file by using the code below 
+```
+import certifi 
+print(certifi.where())
+```
+finally export this path
+
+```export REQUESTS_CA_BUNDLE='path'```
+
